@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  echostarter_example:
+    build: .
+    ports:
+      - 8000:8000
+    image: echostarter_example:development
+    volumes:
+      - ./:/go/src/echostarter_example
+    hostname: localhost
+    environment:
+      - APPNAME=echostarter_example
+    container_name: echostarter_example
